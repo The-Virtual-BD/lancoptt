@@ -53,7 +53,7 @@ class HomeController extends Controller
     // Contuctus page
     public function contactUS()
     {
-        return view('contactUS');
+        return view('contactUs');
     }
     // gallery page
     public function gallery()
