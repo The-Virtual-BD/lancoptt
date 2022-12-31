@@ -1,0 +1,261 @@
+.contact_area {
+    background: #fcb513;
+    padding-top: 135px;
+    padding-bottom: 135px;
+    /* margin-top: 70px; */
+}
+
+.contact_area h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 80px;
+    text-align: center;
+    color: #24272E;
+}
+
+.contact_bg {
+    background: #24272E;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.subs_bg {
+    background: #fcb513;
+}
+
+.input_conatct {
+    display: block;
+    width: 100%;
+}
+
+.input_conatct input {
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none
+}
+
+.input_conatct input:focus {
+    outline: none;
+    border: none;
+}
+
+.text-area_conatct textarea {
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+}
+
+.form_btn {
+    margin-top: 50px;
+}
+
+.form_btn button {
+    border: none;
+    background: #fcb513;
+    color: #24272E;
+    padding: 25px 60px 25px 60px;
+
+}
+
+.contact_info h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.contact_info span {
+    color: #fcb513;
+}
+
+.conatct_way {
+    color: #FFFFFF;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.contact_icon p {
+    font-size: 20px;
+    line-height: 25px;
+    color: #fcb513;
+    margin-right: 20px;
+}
+
+.conatct_text .social-media {
+    margin-left: 40px;
+    margin-top: 0;
+}
+
+.conatct_text p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.subscribe_contact h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 81px;
+    color: #FFFFFF;
+}
+
+.subscribe_contact span {
+    font-weight: 400;
+    font-size: 85px;
+    line-height: 81px;
+    color: #fcb513;
+}
+
+
+.subscribe_btn_contact button {
+	outline: none;
+	border: none;
+	background-color: #fcb513;
+	border: 1px solid #fcb513;
+	padding: 18px 38px;
+	transition: .2s all ease;
+	-webkit-transition: .2s all ease;
+	-moz-transition: .2s all ease;
+	-ms-transition: .2s all ease;
+	-o-transition: .2s all ease;
+}
+
+/* ====================Responsive==================== */
+@media only screen and (max-width: 375px) {
+    .contact_area h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .contact_area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .contact_info h2 {
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact_bg {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .conatct_text p {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .conatct_way {
+        justify-content: center;
+    }
+
+    .form_btn {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .subscribe_contact h2 {
+
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .subscribe_contact span {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 50px;
+        color: #24272E;
+    }
+
+    .subscribe_form {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .subs_bg {
+        background: #fcb513;
+        padding: 20px 0px;
+    }
+
+    .subcribe_input {
+        margin-right: 0;
+    }
+
+    .subcribe_input input {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .subscribe_btn_contact {
+        text-align: center;
+
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .contact_area {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .contact_info h2 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .conatct_way p {
+        text-align: center;
+    }
+
+    .conatct_way {
+        color: #FFFFFF;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .conatct_text .social-media {
+        margin-bottom: 20px;
+    }
+
+    .form_btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .subscribe_form {
+        display: block;
+    }
+
+    .subscribe_form input {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .subscribe_btn_contact {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .subcribe_input {
+        margin-right: 0;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:768px) {}

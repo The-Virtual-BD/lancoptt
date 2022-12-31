@@ -1,0 +1,239 @@
+/* =========Glallery_text-start======= */
+.galllery_hero {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    background: #fcb513;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 70px; */
+}
+
+.galllery_hero-text h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: #24272E;
+}
+
+
+
+
+
+
+/* =========Glallery_text-End======= */
+/* ==========sundorbon start=============== */
+.partners__ul li img {
+    width: 100%;
+
+
+
+}
+
+.partners__ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.galary_sundorban {
+    background: #24272E;
+    padding-bottom: 65px;
+    padding-top: 65px;
+}
+
+.galary-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    border: none;
+}
+
+.galary-button button {
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #24272E;
+    background: #fcb513;
+    border: 1px solid #fcb513;
+    padding: 25px 65px 25px 65px;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.galary-button button:hover {
+    background: none;
+    border: 1px solid #fcb513;
+    color: #fcb513;
+}
+
+
+
+.galary_text h2 {
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 65px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+/* ==============sundarban end============ */
+.galary_text_kuyakata h2 {
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 65px;
+    color: #24272E;
+    margin-bottom: 40px;
+}
+
+.galary_kuyakata {
+    background: #fcb513;
+    padding-bottom: 65px;
+    padding-top: 65px;
+}
+
+.kuyakata__ul li img {
+    width: 100%;
+}
+
+
+.kuyakata__ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+.galary-button-kuayakata {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    border: none;
+}
+
+.galary-button-kuayakata button {
+    border: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #fcb513;
+    background: #24272E;
+    border: 1px solid #fcb513;
+    padding: 25px 65px 25px 65px;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.galary-button-kuayakata button:hover {
+    background: none;
+    border: 1px solid #24272E;
+    color: #24272E;
+}
+
+/* ==========kuayakata-End============ */
+
+@media only screen and (max-width: 375px) {
+    .galllery_hero-text h2 {
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    .galllery_hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .galary_text h2 {
+        font-size: 30px;
+        line-height: 40px;
+
+    }
+
+    .galary_text_kuyakata h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .galary_sundorban {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .galary-button {
+        margin-top: 40px;
+    }
+
+    .galary_kuyakata {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .galary-button-kuayakata {
+        margin-top: 40px;
+
+    }
+    .partners__ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .galllery_hero-text h2 {
+        font-size: 35px;
+        line-height: 45px;
+
+    }
+
+    .galllery_hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+    }
+
+    .galary_text h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .galary-button {
+        margin-top: 40px;
+    }
+
+    .galary_text_kuyakata h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .galary-button-kuayakata {
+        margin-top: 40px;
+    }
+
+    .partners__ul {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .galllery_hero {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .galary_text h2 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .partners__ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}

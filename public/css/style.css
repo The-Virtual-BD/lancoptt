@@ -1,0 +1,1157 @@
+/* ========Header Area============== */
+
+
+
+/* ==============Hero-Area============== */
+
+
+.header_area {
+    background-image: url('../img/hero2.JPG'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.header_area::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #24272E;
+    opacity: .5;
+    z-index: -11111;
+}
+
+.hero_text_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 85vh;
+}
+
+.hero_text h2 {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 130px;
+    color: #FFFFFF;
+    letter-spacing: 5px;
+}
+
+/* ==============Hero-Area============== */
+
+/* ===========Our-tour-Servive-start========= */
+.tour_service {
+    background-color: #24272E;
+    padding-bottom: 60px;
+
+}
+
+.tour_service_text h2 {
+    text-align: center;
+    color: #fff;
+}
+
+
+.service_tour_left h2 {
+    font-weight: 600;
+    font-size: 65px;
+    line-height: 80px;
+    color: #FFFFFF;
+}
+
+.service_tour_left p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 12px;
+
+}
+
+.ticket-btn button {
+    outline: none;
+    border: none;
+    background-color: #fcb513;
+    border: 1px solid #fcb513;
+    padding: 25px 60px;
+    margin-top: 30px;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.ticket-btn button:hover {
+    background-color: transparent;
+    border: 1px solid #fcb513;
+    color: #FFFFFF;
+}
+
+.service_tour_right {
+    margin-bottom: 10px;
+}
+
+/* ===========Our-tour-Servive-end========= */
+
+
+/* ============Tour Galary service========= */
+.tour_galary_area {
+    background: #fcb513;
+    padding-bottom: 70px;
+}
+
+.tour_galary-img {
+    position: relative;
+    z-index: 1;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.side-img img {
+    height: 100%
+}
+
+.galary-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #24272E;
+    opacity: 0;
+    z-index: 2;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.tour_galary-img:hover .galary-overlay {
+    opacity: .4;
+}
+
+.galary-overlay-text {
+    z-index: 111;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.tour_galary-img:hover .galary-overlay-text {
+    opacity: 1;
+}
+
+.galary-overlay-text h2 {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 70px;
+    color: #FFFFFF;
+}
+
+.galary-overlay-text p {
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.view_galary {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.view_galary a {
+    background-color: #24272E;
+    border: 1px solid #24272E;
+    color: #fff;
+    padding: 25px 60px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.view_galary a:hover {
+    background-color: #fcb513;
+    border: 1px solid #24272E;
+    color: #24272E;
+
+}
+
+/* ============Tour Galary service========= */
+
+/* =============Explore Service============= */
+.explore_service_area {
+    background-color: #24272E;
+    padding-bottom: 60px;
+}
+
+
+.explore_card {
+    background-color: #fcb513;
+    height: 100%;
+}
+
+.explore_text {
+    padding: 30px;
+}
+
+.explore_text h2 {
+    font-weight: 400;
+    font-size: 35px;
+    color: #24272E;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.explore_text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: justify;
+    color: #24272E;
+}
+
+.explore-link {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.explore-link a {
+    background-color: #24272E;
+    color: #fcb513;
+    padding: 20px 80px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fcb513;
+    transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+}
+
+.explore-link a:hover {
+    background-color: transparent;
+    border: 1px solid #24272E;
+    color: #24272E;
+
+}
+
+/* =============Explore Service============= */
+
+/* < !--=============Retail Service start=============--> */
+.retail_service_area {
+    background: #fcb513;
+    padding-bottom: 80px;
+
+}
+
+.retail-gap {
+    margin-bottom: 24px;
+}
+
+.retail_img {
+    position: relative;
+    z-index: 1;
+}
+
+.retail_overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #24272E;
+    opacity: 0;
+    z-index: 2;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.retail_img:hover .retail_overlay {
+
+    opacity: .4;
+}
+
+
+
+.retal_link {
+    position: absolute;
+    left: 50%;
+    bottom: 75px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: none;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.retal_link a {
+    color: #24272E;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 25px 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #24272E;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.retal_link a:hover {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #ffffff;
+}
+
+.retail_img:hover .retal_link {
+    display: block;
+}
+
+/* ================ */
+
+.retal_link_small {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    display: none;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.retal_link_small a {
+    color: #24272E;
+    background-color: #FFFFFF;
+    border: 1px sloid #ffffff;
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #24272E;
+    transform: .2s all ease;
+    -webkit-transform: .2s all ease;
+    -moz-transform: .2s all ease;
+    -ms-transform: .2s all ease;
+    -o-transform: .2s all ease;
+}
+
+.retal_link_small a:hover {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #ffffff;
+}
+
+.retail_img:hover .retal_link_small {
+    display: block;
+}
+
+
+/* =========== */
+.explore-service-link {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+
+.explore-service-link a {
+    background-color: #24272E;
+    color: #fcb513;
+    padding: 20px 80px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fcb513;
+    transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+}
+
+.explore-service-link a:hover {
+    background-color: transparent;
+    border: 1px solid #24272E;
+    color: #24272E;
+}
+
+/* < !--=============Retail Service end=============--> */
+/* =========Get-in-a-touch-start=========== */
+.get-in-touch-area {
+    background-color: #fcb513;
+    padding-bottom: 70px;
+}
+
+.get-in-toch-text h2 {
+    color: #24272E;
+}
+
+.get-in-toch-text span {
+    color: #FFFFFF;
+}
+
+/* =========Get-in-a-touch-end=========== */
+
+
+/* ============Submite-area-start========== */
+.submite-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.submite-form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-input {
+    width: 900px;
+}
+
+.text-input input {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    padding: 25px 30px;
+    appearance: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(36, 39, 46, 0.5);
+
+}
+
+.text-input input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.text-input input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.text-input input:focus {
+    outline: none;
+
+}
+
+.text-area textarea {
+    width: 100%;
+    height: 250px;
+    padding: 25px 30px;
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(36, 39, 46, 0.5);
+
+}
+
+.text-area textarea:focus {
+    border-color: none;
+}
+
+.submite_btn {
+    text-align: center;
+}
+
+.submite_btn button {
+    border: none;
+    background-color: #24272E;
+    padding: 25px 65px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fcb513;
+    margin-top: 70px;
+    border: 1px solid #24272E;
+    transition: .2s all ease;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -ms-transition: .2s all ease;
+    -o-transition: .2s all ease;
+}
+
+.submite_btn button:hover {
+    background: none;
+    border: 1px solid #24272E;
+    color: #24272E;
+}
+
+.text-input input::placeholder {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(36, 39, 46, 0.5);
+}
+
+/* ============Submite-area-end========== */
+
+/* ===============Responsive================= */
+
+
+@media only screen and (max-width: 320px) {
+    .menu_item {
+        position: absolute;
+        background-color: #24272E;
+        top: 70px;
+        left: 0;
+        height: 50%;
+        z-index: 7;
+        display: none;
+
+    }
+
+    .menu_item ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #24272E;
+        margin-left: -10%;
+    }
+
+
+
+    .head-text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .nav_left img {
+        width: 150px;
+        height: 25px;
+    }
+
+
+    .hero_text {
+        height: 100%;
+        margin-top: 90px;
+    }
+
+    .hero_text h2 {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    /* .header-gap {
+        margin-top: 30px;
+    } */
+
+    .header_area {
+        height: 200px;
+    }
+
+
+
+    .tour_service {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .tour_service_text h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+
+    .service_tour_left h2 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .service_tour_left p {
+        font-size: 14px;
+        line-height: 16px;
+
+    }
+
+    .ticket-btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+    }
+
+    .ticket-btn button {
+        padding: 8px 18px;
+        margin-top: 20px;
+
+    }
+
+    .tour_galary_area {
+        padding-bottom: 20px;
+    }
+
+    .tour-galary-text {
+        padding-top: 20px;
+    }
+
+    .tour_galary-img {
+        margin-bottom: 0px;
+    }
+
+    .side-img img {
+        width: 300px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .galary-overlay-text h2 {
+        font-size: 30px;
+        line-height: 30px;
+
+    }
+
+    .galary-overlay-text p {
+        font-size: 12px;
+        line-height: 20px;
+
+    }
+
+    .view_galary {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .view_galary a {
+        padding: 8px 18px;
+    }
+
+    .explore_service_area {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .explor_img img {
+        height: 200px;
+    }
+
+    .explore_text h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .explore_text {
+        padding: 10px;
+        margin-top: 0px
+    }
+
+    .explore-link a {
+        padding: 8px 30px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+
+    }
+
+    .explore_card {
+        margin-top: 0px;
+    }
+
+    .retail_service_area {
+        padding-bottom: 30px;
+    }
+
+    .retail_service_text {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .retal_link a {
+        padding: 5px 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .tour_galary-img img {
+        height: 200px;
+    }
+
+    .retail_img {
+        margin-bottom: 15px;
+    }
+
+    .explore-service-link a {
+        padding: 8px 18px;
+        margin-top: 20px;
+    }
+
+    .explore-service-link {
+        margin-top: 19px;
+        margin-bottom: 0px;
+    }
+
+    .explor_img img {
+        height: 200px;
+    }
+
+    .subscribe_text h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .subscribe_text span {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .subscribe_form input {
+        width: 200px;
+    }
+
+    .subdcribe_area {
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 260px;
+
+
+    }
+
+
+    .subscribe_text h2 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        color: #FFFFFF;
+    }
+
+    .subscribe_text span {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        color: #fcb513;
+    }
+
+    .subscribe_form {
+        display: block;
+        height: 120px;
+
+    }
+
+    .subcribe_input {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .subcribe_input input {
+        width: 250px;
+        height: 50px;
+        padding: 20px 10px;
+    }
+
+
+
+    .subscribe_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+    }
+
+    .subscribe_btn button {
+        padding: 10px 30px;
+
+    }
+
+    .get-in-touch-area {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .text-input {
+        width: 300px;
+    }
+
+    .text-input input {
+        margin-bottom: 10px;
+        padding: 15px 20px;
+        font-size: 16px;
+        line-height: 19px;
+
+    }
+
+    .text-area textarea {
+        height: 150px;
+        padding: 15px 20px;
+        font-size: 16px;
+        line-height: 19px;
+
+    }
+
+
+    .submite_btn button {
+        padding: 10px 30px;
+        margin-top: 20px;
+    }
+
+    .footer-main-area {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 150px;
+        height: 25px;
+        text-align: center;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .tour-service {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .tour-service h2 {
+        margin-bottom: 0px;
+        font-size: 18px;
+    }
+
+    .footer-down {
+        height: 40px;
+    }
+
+    .footer-down p {
+        font-size: 12px;
+        line-height: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header_area {
+        height: 250px;
+    }
+
+
+
+    .hero_text {
+        height: 100%;
+        margin-top: 80px;
+    }
+
+    .hero_text h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+
+
+
+    .head-text {
+        font-size: 30px;
+        line-height: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .tour_service {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .service_tour_left h2 {
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .service_tour_left p {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+    }
+
+    .ticket-btn {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .ticket-btn button {
+        padding: 10px 50px;
+    }
+
+    .service_tour_right {
+        margin: 0;
+    }
+
+    .tour_galary-img {
+        margin-bottom: 16px;
+    }
+
+    .tour_galary-img img {
+        height: 350px;
+    }
+
+    .galary-overlay-text h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .galary-overlay-text p {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .view_galary {
+        margin-top: 0px;
+    }
+
+    .tour_galary_area {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .view_galary a {
+        padding: 15px 50px;
+    }
+
+    .explore_service_area {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .explor_img img {
+        height: 200px;
+    }
+
+    .explore_text {
+        padding-top: 15px;
+    }
+
+    .explore_text h2 {
+        margin: 20px;
+    }
+
+    .explore-link {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .explore-link a {
+        padding: 10px 50px;
+    }
+
+    .retail_service_area {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .retail_img {
+        margin-bottom: 10px;
+    }
+
+    .retal_link a {
+        padding: 10px 16px;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 18px;
+
+    }
+
+    .explore_card {
+
+        margin-bottom: 20px;
+    }
+
+    .explore-service-link {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .explore-service-link a {
+        padding: 10px 50px;
+    }
+
+    .subscribe_text h2 {
+        font-size: 50px;
+        line-height: 60px;
+
+    }
+
+    .subscribe_text span {
+        font-size: 60px;
+        line-height: 60px;
+    }
+
+    .subdcribe_area {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .subscribe_form {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    .subcribe_input {
+        margin: 0;
+    }
+
+    .subcribe_input input {
+        width: 100%;
+        padding: 10px 30px;
+        margin: 0;
+
+    }
+
+    .subscribe_btn button {
+        padding: 10px 60px;
+        margin-top: 10px;
+    }
+
+    .text-input {
+        width: 100%;
+    }
+
+    .submite-form {
+        width: 100%;
+        display: block;
+    }
+
+    .text-input input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 15px 30px;
+
+    }
+
+    .text-area textarea {
+        height: 150px;
+    }
+
+    .submite_btn button {
+        padding: 10px 60px;
+        margin-top: 20px;
+
+    }
+
+    .get-in-touch-area {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .social-media {
+
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer-main-area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .tour-service h2 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header_area {
+        height: 400px;
+    }
+
+    .hero_text {
+        height: 100%;
+        margin-top: 150px;
+    }
+}
+
+
+
+/**** ****/
