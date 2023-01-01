@@ -4,7 +4,7 @@
             <div class="menu-area">
                 <div class="menu-logo">
                     <div class="logo-img">
-                        <a href="#"><img src="{{ asset('img/logo-white.png') }}" alt="logo"></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('img/logo-white.png') }}" alt="logo"></a>
                     </div>
                 </div>
                 <div class="nav_left">

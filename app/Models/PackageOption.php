@@ -8,16 +8,19 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Package extends Model implements HasMedia
+class PackageOption extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
-    protected $fillable = ['title','price','body'];
+    protected $fillable = ['title','body','package_id'];
 
 
 
-    public function options()
+
+
+
+    public function package()
     {
-        return $this->hasMany(PackageOption::class);
+        return $this->belongsTo(Package::class);
     }
 
 }

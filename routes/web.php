@@ -13,6 +13,7 @@ use App\Http\Controllers\PackageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PackageOptionController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\SubscriberController;
 
@@ -22,6 +23,7 @@ Route::get('/contactUS', [HomeController::class, 'contactUS'])->name('contactUs'
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/allCruises', [HomeController::class, 'allCruises'])->name('allCruises');
 Route::get('/retailService', [HomeController::class, 'retailService'])->name('retailService');
+Route::get('/detailspackage', [HomeController::class, 'detailspackage'])->name('detailspackage');
 
 // Contuctus message send ans response
 Route::post('/contactUs/send', [HomeController::class, 'contsend'])->name('contsend');
@@ -45,6 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('subscribers', SubscriberController::class);
     Route::resource('trades', TradeController::class);
     Route::resource('packages', PackageController::class);
+    Route::resource('packagesOptions', PackageOptionController::class);
     Route::resource('cruises', CruiseController::class);
     // News letters
     Route::group(['prefix' => 'newsletters'], function () {
@@ -68,6 +71,7 @@ Route::group(['middleware' => ['auth']], function () {
     // Media handeling
     Route::post('/galaryupload', [UploadController::class, 'store']);
     Route::delete('/galleries/{gallery}/media/{media}', [UploadController::class, 'delete'])->name('mediaDelete');
+    Route::delete('/media/{media}', [UploadController::class, 'mideaDelete'])->name('mideaDelete');
 
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

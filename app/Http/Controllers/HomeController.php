@@ -90,6 +90,26 @@ class HomeController extends Controller
         return view('retailService',compact('trades'));
     }
 
+
+    // detailspackage page
+    public function detailspackage()
+    {
+        $packages = Package::all();
+
+        foreach ($packages as $package) {
+            $package->getMedia();
+
+            foreach ($package->options as $option) {
+                $option->getMedia();
+            }
+        }
+
+
+        // return $packages;
+
+        return view('packagesd',compact('packages'));
+    }
+
     // Contuctus send
     public function contsend(Request $request)
     {

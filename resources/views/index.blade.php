@@ -162,7 +162,7 @@
                                 <h2>৳ {{$item->price}} /=</h2>
                                 <p>{!!$item->body!!}</p>
                                 <div class="explore-link">
-                                    <a href="{{route('contactUs')}}">CONTUCT US</a>
+                                    <a href="{{route('detailspackage')}}">DETAILS</a>
                                 </div>
                             </div>
                         </div>

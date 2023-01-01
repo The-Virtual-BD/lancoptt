@@ -23,7 +23,6 @@
                 <tr>
                     <th>Sl</th>
                     <th>Title</th>
-                    <th>Price</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -37,7 +36,7 @@
             var datatablelist = $('#packageTable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{!! route('packages.index') !!}",
+                ajax: "{!! route('packagesOptions.index') !!}",
                 columns: [{
                         "render": function(data, type, full, meta) {
                             return meta.row + meta.settings._iDisplayStart + 1;
@@ -48,24 +47,20 @@
                         name: 'title'
                     },
                     {
-                        data: 'price',
-                        name: 'price'
-                    },
-                    {
                         data: null,
                         render: function(data) {
-                            return `<div class="flex"><a href="${BASE_URL}packages/${data.id}" class="bg-blue-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-blue-700" ><span class="iconify" data-icon="ic:baseline-remove-red-eye"></span></a><a href="${BASE_URL}packages/${data.id}" class="bg-green-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-green-700" ><span class="iconify" data-icon="dashicons:edit"></span></a>
-                                <button type="button"  class="bg-red-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-red-700" onclick="packageDelete(${data.id});"><span class="iconify" data-icon="bi:trash-fill"></span></button></div>`;
+                            return `<div class="flex"><a href="${BASE_URL}packagesOptions/${data.id}" class="bg-blue-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-blue-700" ><span class="iconify" data-icon="ic:baseline-remove-red-eye"></span></a><a href="${BASE_URL}packagesOptions/${data.id}" class="bg-green-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-green-700" ><span class="iconify" data-icon="dashicons:edit"></span></a>
+                                <button type="button"  class="bg-red-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-red-700" onclick="packagesOptionDelete(${data.id});"><span class="iconify" data-icon="bi:trash-fill"></span></button></div>`;
                         }
                     }
                 ]
             });
 
 
-            function packageDelete(packageID) {
+            function packagesOptionDelete(packagesOptionID) {
                 Swal.fire({
                     title: "Delete ?",
-                    text: "Are you sure to delete this package ?",
+                    text: "Are you sure to delete this packages Option ?",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -75,7 +70,7 @@
                     if (result.value) {
                         $.ajax({
                             method: 'DELETE',
-                            url: BASE_URL + 'packages/' + packageID,
+                            url: BASE_URL + 'packagesOptions/' + packagesOptionID,
                             success: function(response) {
                                 if (response.status == "success") {
                                     Swal.fire('Success!', response.message, 'success');

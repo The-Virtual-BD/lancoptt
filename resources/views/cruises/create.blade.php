@@ -14,7 +14,7 @@
     <x-slot name="headerstyle">
         <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     </x-slot>
-    
+
     <x-slot name="headerscript">
         <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
     </x-slot>
@@ -33,7 +33,7 @@
 
             {{-- Image --}}
             <div class="mt-4">
-                <input id="image" name="image[]" multiple="false" type="file" class="">
+                <input id="image" name="image[]" multiple="false" type="file" class="" required>
             </div>
 
             <!-- Body -->

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\Models\PackageOption;
 use App\Models\TemporaryFile;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 
 class UploadController extends Controller
 {
@@ -35,6 +38,15 @@ class UploadController extends Controller
         $image =  $gallery->media->where('id',$id)->first();
         $image->delete();
 
+        return redirect()->back();
+    }
+
+
+    //Delete any Media
+    public function mideaDelete($id)
+    {
+        $media = Media::find($id);
+        $media->delete();
         return redirect()->back();
     }
 

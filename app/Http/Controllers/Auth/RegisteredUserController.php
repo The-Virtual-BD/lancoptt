@@ -37,18 +37,23 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        $fieldType = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone';
+
+        $user = new User();
+        $user->name = $request->name;
+        if ($fieldType == 'email') {
+            $user->email = $request->email;
+        }else{
+            $user->phone = $request->email;
+        }
+        $user->password = Hash::make($request->password);
+        $user->save();
 
         event(new Registered($user));
-
         Auth::login($user);
 
 

@@ -11,7 +11,7 @@
 
             <!-- Email Address -->
             <div>
-                <input type="email" name="email" placeholder="Email" required autofocus>
+                <input type="text" name="email" placeholder="Email/Phone" required autofocus>
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 

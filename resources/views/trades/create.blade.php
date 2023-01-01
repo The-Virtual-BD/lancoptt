@@ -30,7 +30,7 @@
             {{-- Image --}}
             <div class="mt-4">
                 <x-input-label for="body" :value="__('Image (416x416)')" />
-                <input id="image" name="image[]" multiple="false" type="file" class="">
+                <input id="image" name="image[]" multiple="false" type="file" class="" required>
             </div>
 
             <!-- Body -->

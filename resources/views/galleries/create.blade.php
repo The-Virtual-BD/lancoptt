@@ -38,7 +38,7 @@
             <div class="mt-4">
             </div>
             <div class="mt-4">
-                <input id="image" name="image[]" multiple="true" type="file" class="">
+                <input id="image" name="image[]" multiple="true" type="file" class="" required>
             </div>
 
             <div class="flex items-center justify-end mt-4 pt-4">

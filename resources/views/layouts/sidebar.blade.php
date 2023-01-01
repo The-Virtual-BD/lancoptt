@@ -45,6 +45,10 @@
         <span class="iconify" data-icon="bxs:package"></span>
         <p class="sidelinktext">Packages</p>
     </x-sidenav-link>
+    {{-- <x-sidenav-link :href="route('packagesOptions.index')" :active="request()->routeIs('packagesOptions.*')">
+        <span class="iconify" data-icon="raphael:package"></span>
+        <p class="sidelinktext">Package Option</p>
+    </x-sidenav-link> --}}
     <x-sidenav-link :href="route('cruises.index')" :active="request()->routeIs('cruises.*')">
         <span class="iconify" data-icon="fluent-emoji-high-contrast:ship"></span>
         <p class="sidelinktext">Cruise</p>

@@ -25,9 +25,13 @@
     </x-slot>
 
     <div class="p-6">
+        <div class="bg-white rounded-md shadow p-6 mb-4">
+            <h1 class="font-bold text-2xl">{{ $packageOption->package->title }}</h1>
+        </div>
         <div class="bg-white rounded-md shadow p-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div class="sm:col-span-2">
-                <form method="POST" action="{{ route('packages.update', $package->id) }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('packagesOptions.update', $packageOption->id) }}"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <!-- Title -->
@@ -35,33 +39,16 @@
                         <x-input-label for="title" :value="__('Title')" />
 
                         <x-text-input id="title" class="block mt-1 w-full" type="text" name="title"
-                            value="{{ $package->title }}" required autofocus />
+                            value="{{ $packageOption->title }}" required autofocus />
 
                         <x-input-error :messages="$errors->get('title')" class="mt-2" />
-                    </div>
-
-
-                    <!-- Price -->
-                    <div class="mt-4">
-                        <x-input-label for="price" :value="__('Price')" />
-
-                        <x-text-input id="price" class="block mt-1 w-full onlynumber" type="text" name="price" value="{{ $package->price }}"
-                            required />
-
-                        <x-input-error :messages="$errors->get('price')" class="mt-2" />
-                    </div>
-
-                    {{-- Image --}}
-                    <div class="mt-4">
-                        <x-input-label for="body" :value="__('Package Image (416x416)')" />
-                        <input id="image" name="image[]" multiple="false" type="file" class="">
                     </div>
 
                     <!-- Body -->
                     <div class="mt-4">
                         <x-input-label for="body" :value="__('Body text')" />
                         <textarea class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
-                            name="body" id="body" rows="5" required>{{ $package->body }}</textarea>
+                            name="body" id="body" rows="5" required>{{ $packageOption->body }}</textarea>
                         <x-input-error :messages="$errors->get('body')" class="mt-2" />
                     </div>
 
@@ -73,51 +60,52 @@
                 </form>
             </div>
             <div class="hidden sm:block bg-orange-300">
-                <img src="{{ $package->media->first()->original_url }}" alt="" srcset="">
+                <img src="{{ $packageOption->media->first()->original_url }}" alt="" srcset="">
                 <div class="p-4">
-
-                    <h2 class="text-center font-bold uppercase text-2xl">{{ $package->title }}</h2>
-                    <p class="text-center font-bold text-4xl flex justify-center items-center"><span class="iconify"
-                            data-icon="tabler:currency-taka"></span> {{ $package->price }}/=</p>
-                    <p class="mt-4 text-justify">{!! $package->body !!}</p>
-                    <div class="flex justify-center mt-4">
-                        <button class="text-center px-3 py-2 bg-gray-800 text-orange-300 ">Explore</button>
-                    </div>
+                    <h2 class="text-center font-bold uppercase text-2xl">{{ $packageOption->title }}</h2>
+                    <p class="mt-4 text-justify">{!! $packageOption->body !!}</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="p-6">
-        <div class="p-6 bg-white rounded-md shadow">
-            @forelse ($package->options as $option)
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                <div class="">
-                    <div class="flex">
+        <div class="bg-white rounded-md shadow p-6">
 
-                        <h3 class="font-bold text-2xl mb-4 mr-4">{{$option->title}}</h3>
-                        <a href="{{route('packagesOptions.show', $option->id)}}" class="bg-gray-800 text-orange-300 hover:bg-orange-300 hover:text-gray-800 flex justify-center items-center w-[38px] h-[38px] rounded"> Edit </a>
-                    </div>
-                    <p>{!!$option->body!!}</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    @forelse ($option->media as $media)
-                    <div class="relative group">
-                        <img src="{{$media->original_url}}" alt="" srcset="">
-                        <form action="{{route('mideaDelete',$media->id)}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="absolute hidden group-hover:block right-2.5 top-2.5 text-xl text-orange-300 hover:text-red-500 px-1 py-1 rounded bg-gray-300/40 hover:bg-gray-800"><span class="iconify" data-icon="bi:trash-fill"></button>
-                        </form>
-                    </div>
-                    @empty
+            <h2 class="font-bold text-xl mb-4">Add Images</h2>
+            <form method="POST" action="{{ route('packagesOptions.update', $packageOption->id) }}"
+                enctype="multipart/form-data">
+                @csrf
+                @method('PATCH')
 
-                    @endforelse
+                {{-- Image --}}
+                <div class="mt-4">
+                    <x-input-label for="body" :value="__('Package Image (416x416)')" />
+                    <input id="image" name="image[]" multiple="true" type="file" class="">
                 </div>
+
+                <div class="flex items-center justify-end mt-4">
+                    <x-primary-button class="ml-4">
+                        {{ __('Add this image') }}
+                    </x-primary-button>
+                </div>
+            </form>
+            <h2 class="font-bold text-xl mb-4">All Images</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                @forelse ($packageOption->media as $media)
+                <div class="relative group">
+                    <img src="{{$media->original_url}}" alt="" srcset="">
+                    <form action="{{route('mideaDelete',$media->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="absolute hidden group-hover:block right-2.5 top-2.5 text-xl text-orange-300 hover:text-red-500 px-1 py-1 rounded bg-gray-300/40 hover:bg-gray-800"><span class="iconify" data-icon="bi:trash-fill"></button>
+                    </form>
+                </div>
+                @empty
+                <p>No Other Image In this Option</p>
+                @endforelse
+
             </div>
-            @empty
-            <p> NO Option in This package</p>
-            @endforelse
         </div>
     </div>
 

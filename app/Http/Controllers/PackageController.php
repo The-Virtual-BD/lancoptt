@@ -72,6 +72,10 @@ class PackageController extends Controller
     public function show(Package $package)
     {
         $package->getMedia();
+
+        foreach ($package->options as $option) {
+            $option->getMedia();
+        }
         return view('packages.show',compact('package'));
     }
 
