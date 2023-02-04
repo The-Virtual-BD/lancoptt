@@ -3,18 +3,71 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @endsection
 @section('content')
-    <!-- ===============Hero-Start=============== -->
-    <section class="header-gap">
-        <div class="header_area">
-            <div class="container">
-                <div class="hero_text_area">
-                    <div class="hero_text">
-                        <h2>MAKE YOUR <br> <span class="yellow-text">TOUR</span> <br>UNSTOPABLE</h2>
+
+
+    {{-- <section class="header-gap">
+            <div class="header_area  one">
+                <div class="container">
+                    <div class="hero_text_area">
+                        <div class="hero_text">
+                            <h2>MAKE YOUR <br> <span class="yellow-text">TOUR</span> <br>UNSTOPABLE</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+    </section> --}}
+    <section>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="header_area  one">
+                    <div class="container">
+                        <div class="hero_text_area">
+                            <div class="hero_text">
+                                <h2>MAKE YOUR <br> <span class="yellow-text">TOUR</span> <br>UNSTOPPABLE</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="header_area  two">
+                    <div class="container">
+                        <div class="hero_text_area">
+                            <div class="hero_text">
+                                <h2>MAKE YOUR <br> <span class="yellow-text">TOUR</span> <br>UNSTOPPABLE</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="header_area  three">
+                    <div class="container">
+                        <div class="hero_text_area">
+                            <div class="hero_text">
+                                <h2>MAKE YOUR <br> <span class="yellow-text">TOUR</span> <br>UNSTOPPABLE</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
     </section>
+
+
+
     <!-- ===============Hero-end=============== -->
     <!-- ==============Tour-service start================== -->
 
@@ -247,3 +300,7 @@
     </section>
     <!-- =========Get-in-a-touch-end=========== -->
 @endsection
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
