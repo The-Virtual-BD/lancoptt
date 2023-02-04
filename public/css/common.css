@@ -42,6 +42,11 @@ p {
     height: 106px;
     width: 100%;
 }
+.tab_area {
+	background: #24272E;
+	padding-top: 65px;
+	padding-bottom: 65px;
+}
 
 /* Text color */
 .text-g{

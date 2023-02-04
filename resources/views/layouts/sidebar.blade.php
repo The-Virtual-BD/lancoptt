@@ -41,7 +41,7 @@
         <span class="iconify" data-icon="material-symbols:home-repair-service-rounded"></span>
         <p class="sidelinktext">Trades</p>
     </x-sidenav-link>
-    <x-sidenav-link :href="route('packages.index')" :active="request()->routeIs('packages.*')">
+    <x-sidenav-link :href="route('packages.index')" :active="request()->routeIs(['packages.*', 'packagesOptions.*'])">
         <span class="iconify" data-icon="bxs:package"></span>
         <p class="sidelinktext">Packages</p>
     </x-sidenav-link>
@@ -49,7 +49,7 @@
         <span class="iconify" data-icon="raphael:package"></span>
         <p class="sidelinktext">Package Option</p>
     </x-sidenav-link> --}}
-    <x-sidenav-link :href="route('cruises.index')" :active="request()->routeIs('cruises.*')">
+    <x-sidenav-link :href="route('cruises.index')" :active="request()->routeIs(['cruises.*','cruiseOptions.*'])">
         <span class="iconify" data-icon="fluent-emoji-high-contrast:ship"></span>
         <p class="sidelinktext">Cruise</p>
     </x-sidenav-link>

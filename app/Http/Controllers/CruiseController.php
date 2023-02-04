@@ -73,6 +73,9 @@ class CruiseController extends Controller
     public function show(Cruise $cruise)
     {
         $cruise->getMedia();
+        foreach ($cruise->options as $option) {
+            $option->getMedia();
+        }
         return view('cruises.show',compact('cruise'));
     }
 

@@ -100,15 +100,10 @@
                     </div>
                     <p>{!!$option->body!!}</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1">
                     @forelse ($option->media as $media)
-                    <div class="relative group">
+                    <div class="">
                         <img src="{{$media->original_url}}" alt="" srcset="">
-                        <form action="{{route('mideaDelete',$media->id)}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="absolute hidden group-hover:block right-2.5 top-2.5 text-xl text-orange-300 hover:text-red-500 px-1 py-1 rounded bg-gray-300/40 hover:bg-gray-800"><span class="iconify" data-icon="bi:trash-fill"></button>
-                        </form>
                     </div>
                     @empty
 

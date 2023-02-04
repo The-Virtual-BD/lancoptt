@@ -8,6 +8,12 @@
             <x-nav-link :href="route('cruises.create')" :active="request()->routeIs('cruises.create')">
                 {{ __('New Cruise') }}
             </x-nav-link>
+            <x-nav-link :href="route('cruiseOptions.index')" :active="request()->routeIs('cruiseOptions.index')">
+                {{ __('All Options') }}
+            </x-nav-link>
+            <x-nav-link :href="route('cruiseOptions.create')" :active="request()->routeIs('cruiseOptions.create')">
+                {{ __('New Option') }}
+            </x-nav-link>
         </div>
     </x-slot>
 

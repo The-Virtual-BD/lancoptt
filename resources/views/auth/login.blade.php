@@ -1,12 +1,12 @@
 <x-guest-layout>
     <!-- Session Status -->
-    @props(['status'])
+    {{-- @props(['status'])
 
     @if ($status)
         <div class="mb-4 font-medium text-sm text-green-600" :status="session('status')">
             {{ $status }}
         </div>
-    @endif
+    @endif --}}
 
     <form method="POST" action="{{ route('login') }}">
         @csrf

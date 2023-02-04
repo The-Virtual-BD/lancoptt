@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="hero_text_area">
                     <div class="hero_text">
-                        <h2>EXPLORE OUR <br> <span class="yellow-text">CONSTRUCTION</span> <br>ITEMS</h2>
+                        <h2>MAKE YOUR <br> <span class="yellow-text">TOUR</span> <br>UNSTOPABLE</h2>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="service_tour_left">
-                            <h2>NEED A<br> <span class="yellow-text">GREAT VACATION ?</span></h2>
+                            <h2 class="text-uppercase">Explore Our<br> <span class="yellow-text">Tour Package</span></h2>
                             {{-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book.</p> --}}
@@ -131,7 +131,13 @@
                         </div>
                         <div class="p-4 bg-mygray text-w">
                             <p>{!!$item->body!!}</p>
+                            <div class="ticket-btn d-flex justify-content-center">
+                                <a href="{{route('allCruises')}}">
+                                    <button>SEE CRUISES</button>
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                     @endforeach
                 </div>

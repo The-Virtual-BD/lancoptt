@@ -2,20 +2,18 @@
     <x-slot name="submenu">
         <!-- Navigation Links -->
         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-            <x-nav-link :href="route('packages.index')" :active="request()->routeIs('packages.index')">
-                {{ __('All Packages') }}
+            <x-nav-link :href="route('cruises.index')" :active="request()->routeIs('cruises.index')">
+                {{ __('All Cruises') }}
             </x-nav-link>
-            <x-nav-link :href="route('packages.create')" :active="request()->routeIs('packages.create')">
-                {{ __('New Package') }}
+            <x-nav-link :href="route('cruises.create')" :active="request()->routeIs('cruises.create')">
+                {{ __('New Cruise') }}
             </x-nav-link>
-            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link :href="route('packagesOptions.index')" :active="request()->routeIs('packagesOptions.index')">
-                    {{ __('All Options') }}
-                </x-nav-link>
-                <x-nav-link :href="route('packagesOptions.create')" :active="request()->routeIs('packagesOptions.create')">
-                    {{ __('New Package Option') }}
-                </x-nav-link>
-            </div>
+            <x-nav-link :href="route('cruiseOptions.index')" :active="request()->routeIs('cruiseOptions.index')">
+                {{ __('All Options') }}
+            </x-nav-link>
+            <x-nav-link :href="route('cruiseOptions.create')" :active="request()->routeIs('cruiseOptions.create')">
+                {{ __('New Option') }}
+            </x-nav-link>
         </div>
     </x-slot>
 
@@ -26,19 +24,19 @@
         <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
     </x-slot>
     <div class="p-6 ">
-        <form method="POST" action="{{ route('packagesOptions.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('cruiseOptions.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="">
-                <label for="package_id" class="block text-sm font-medium text-gray-700">Package</label>
+                <label for="cruise_id" class="block text-sm font-medium text-gray-700">Cruise</label>
                 <div class="flex gap-4 items-center">
 
-                    <select id="package_id" name="package_id" class="grow mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500 sm:text-sm">
-                        @foreach ($packages as $item)
+                    <select id="cruise_id" name="cruise_id" class="grow mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500 sm:text-sm">
+                        @foreach ($cruises as $item)
 
                         <option value="{{$item->id}}">{{$item->title}}</option>
                         @endforeach
                     </select>
-                    <a href="{{route('packages.create')}}" class="bg-gray-800 text-orange-300 hover:bg-orange-300 hover:text-gray-800 flex justify-center items-center w-[38px] h-[38px] rounded"><span class="iconify" data-icon="material-symbols:add"></span></a>
+                    <a href="{{route('cruises.create')}}" class="bg-gray-800 text-orange-300 hover:bg-orange-300 hover:text-gray-800 flex justify-center items-center w-[38px] h-[38px] rounded"><span class="iconify" data-icon="material-symbols:add"></span></a>
                 </div>
             </div>
 
@@ -65,13 +63,13 @@
 
             {{-- Image --}}
             <div class="my-4">
-                <x-input-label for="body" :value="__('Package Image (416x416)')" />
+                <x-input-label for="body" :value="__('Cruise Option Image (416x416)')" />
                 <input id="image" name="image[]" type="file" class="">
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 <x-primary-button class="ml-4">
-                    {{ __('Create Package Option') }}
+                    {{ __('Create Cruise Option') }}
                 </x-primary-button>
             </div>
         </form>

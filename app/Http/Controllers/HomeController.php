@@ -72,9 +72,16 @@ class HomeController extends Controller
     public function allCruises()
     {
         $cruises = Cruise::all();
-        foreach ($cruises as $trade) {
-            $trade->getMedia();
+
+
+        foreach ($cruises as $cruise) {
+            $cruise->getMedia();
+
+            foreach ($cruise->options as $option) {
+                $option->getMedia();
+            }
         }
+
         return view('allCruises',compact('cruises'));
     }
 

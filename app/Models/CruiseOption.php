@@ -8,15 +8,15 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Cruise extends Model implements HasMedia
+class CruiseOption extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia;
-    protected $fillable = ['title','body'];
+    protected $fillable = ['title','body','cruise_id'];
 
 
-    public function options()
+    public function cruise()
     {
-        return $this->hasMany(CruiseOption::class);
+        return $this->belongsTo(Cruise::class);
     }
 
 }

@@ -25,7 +25,7 @@
             "ctaText": "Start Chat",
             "borderRadius": "25",
             "autoShow": false,
-            "phoneNumber": "8801956113999"
+            "phoneNumber": "8801711176593"
         }
     };
     s.onload = function() {

@@ -12,6 +12,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CruiseOptionController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PackageOptionController;
 use App\Http\Controllers\PermissionController;
@@ -49,6 +50,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('packages', PackageController::class);
     Route::resource('packagesOptions', PackageOptionController::class);
     Route::resource('cruises', CruiseController::class);
+    Route::resource('cruiseOptions', CruiseOptionController::class);
+
     // News letters
     Route::group(['prefix' => 'newsletters'], function () {
         Route::get('/', [NewsletterController::class, 'index'])->name('newsletters.index');

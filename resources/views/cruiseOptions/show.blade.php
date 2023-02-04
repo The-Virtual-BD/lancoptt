@@ -20,86 +20,62 @@
     <x-slot name="headerstyle">
         <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     </x-slot>
-
     <x-slot name="headerscript">
         <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
     </x-slot>
 
-
     <div class="p-6">
+        <div class="bg-white rounded-md shadow p-6 mb-4">
+            <h1 class="font-bold text-2xl">{{ $cruiseOption->cruise->title }}</h1>
+        </div>
         <div class="bg-white rounded-md shadow p-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div class="sm:col-span-2">
-                <form method="POST" action="{{ route('cruises.update',$cruise->id) }}" enctype="multipart/form-data" >
+                <form method="POST" action="{{ route('cruiseOptions.update', $cruiseOption->id) }}"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <!-- Title -->
                     <div>
                         <x-input-label for="title" :value="__('Title')" />
 
-                        <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" value="{{$cruise->title}}" required autofocus />
+                        <x-text-input id="title" class="block mt-1 w-full" type="text" name="title"
+                            value="{{ $cruiseOption->title }}" required autofocus />
 
                         <x-input-error :messages="$errors->get('title')" class="mt-2" />
-                    </div>
-
-                    {{-- Image --}}
-                    <div class="mt-4">
-                        <input id="image" name="image[]" multiple="false" type="file" class="">
                     </div>
 
                     <!-- Body -->
                     <div class="mt-4">
                         <x-input-label for="body" :value="__('Body text')" />
-                        <textarea class=" block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm" name="body" id="body" rows="5" required>{!!$cruise->body!!}</textarea>
+                        <textarea class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                            name="body" id="body" rows="5" required>{{ $cruiseOption->body }}</textarea>
                         <x-input-error :messages="$errors->get('body')" class="mt-2" />
+                    </div>
+
+                    {{-- Image --}}
+                    <div class="mt-4">
+                        <x-input-label for="body" :value="__('Package Image (416x416)')" />
+                        <input id="image" name="image[]" type="file" class="">
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
                         <x-primary-button class="ml-4">
-                            {{ __('Create Cruises') }}
+                            {{ __('Update Package') }}
                         </x-primary-button>
                     </div>
                 </form>
             </div>
             <div class="hidden sm:block bg-orange-300">
-                <img src="{{$cruise->media->first()->original_url}}" alt="" srcset="">
+                <img src="{{ $cruiseOption->media->first()->original_url }}" alt="" srcset="">
                 <div class="p-4">
-
-                    <h2 class="text-center font-bold uppercase text-2xl">{{$cruise->title}}</h2>
-                    <p class="mt-4 text-justify">{!!$cruise->body!!}</p>
-                    <div class="flex justify-center mt-4">
-                        <button class="text-center px-3 py-2 bg-gray-800 text-orange-300 ">Explore</button>
-                    </div>
+                    <h2 class="text-center font-bold uppercase text-2xl">{{ $cruiseOption->title }}</h2>
+                    <p class="mt-4 text-justify">{!! $cruiseOption->body !!}</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="p-6">
-        <div class="p-6 bg-white rounded-md shadow">
-            @forelse ($cruise->options as $option)
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                <div class="">
-                    <div class="flex">
 
-                        <h3 class="font-bold text-2xl mb-4 mr-4">{{$option->title}}</h3>
-                        <a href="{{route('cruiseOptions.show', $option->id)}}" class="bg-gray-800 text-orange-300 hover:bg-orange-300 hover:text-gray-800 flex justify-center items-center w-[38px] h-[38px] rounded"> Edit </a>
-                    </div>
-                    <p>{!!$option->body!!}</p>
-                </div>
-                <div class="grid grid-cols-1">
-                    @forelse ($option->media as $media)
-                    <div class="">
-                        <img src="{{$media->original_url}}" alt="" srcset="">
-                    </div>
-                    @empty
 
-                    @endforelse
-                </div>
-            </div>
-            @empty
-            <p> NO Option in This package</p>
-            @endforelse
-        </div>
-    </div>
 
     <x-slot name="script">
         <!-- Load FilePond library -->
@@ -107,7 +83,9 @@
         <!-- Turn all file input elements into ponds -->
         <script>
             // Create the FilePond instance
-            FilePond.create(document.querySelector('input[name="image[]"]'), {chunkUploads: true});
+            FilePond.create(document.querySelector('input[name="image[]"]'), {
+                chunkUploads: true
+            });
             FilePond.setOptions({
                 server: {
                     url: '/galaryupload',
@@ -117,9 +95,8 @@
                 }
             });
 
-
             // CKEditor 4
-            CKEDITOR.replace( 'body' );
+            CKEDITOR.replace('body');
         </script>
     </x-slot>
 

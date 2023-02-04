@@ -51,6 +51,11 @@
                             name="body" id="body" rows="5" required>{{ $packageOption->body }}</textarea>
                         <x-input-error :messages="$errors->get('body')" class="mt-2" />
                     </div>
+                    {{-- Image --}}
+                    <div class="mt-4">
+                        <x-input-label for="body" :value="__('Package Image (416x416)')" />
+                        <input id="image" name="image[]" type="file" class="">
+                    </div>
 
                     <div class="flex items-center justify-end mt-4">
                         <x-primary-button class="ml-4">
@@ -69,45 +74,6 @@
         </div>
     </div>
 
-    <div class="p-6">
-        <div class="bg-white rounded-md shadow p-6">
-
-            <h2 class="font-bold text-xl mb-4">Add Images</h2>
-            <form method="POST" action="{{ route('packagesOptions.update', $packageOption->id) }}"
-                enctype="multipart/form-data">
-                @csrf
-                @method('PATCH')
-
-                {{-- Image --}}
-                <div class="mt-4">
-                    <x-input-label for="body" :value="__('Package Image (416x416)')" />
-                    <input id="image" name="image[]" multiple="true" type="file" class="">
-                </div>
-
-                <div class="flex items-center justify-end mt-4">
-                    <x-primary-button class="ml-4">
-                        {{ __('Add this image') }}
-                    </x-primary-button>
-                </div>
-            </form>
-            <h2 class="font-bold text-xl mb-4">All Images</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                @forelse ($packageOption->media as $media)
-                <div class="relative group">
-                    <img src="{{$media->original_url}}" alt="" srcset="">
-                    <form action="{{route('mideaDelete',$media->id)}}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="absolute hidden group-hover:block right-2.5 top-2.5 text-xl text-orange-300 hover:text-red-500 px-1 py-1 rounded bg-gray-300/40 hover:bg-gray-800"><span class="iconify" data-icon="bi:trash-fill"></button>
-                    </form>
-                </div>
-                @empty
-                <p>No Other Image In this Option</p>
-                @endforelse
-
-            </div>
-        </div>
-    </div>
 
     <x-slot name="script">
         <!-- Load FilePond library -->
